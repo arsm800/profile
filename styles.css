@@ -5,6 +5,8 @@ h1 {
 h2, h3, h4, h5 {
   font: 2em black sans-serif;
   padding: .75em;
+  background-color: #22A4FE
+
 
 }
 a {
@@ -13,7 +15,7 @@ a {
   padding: 2em 2em 2em 2em;
   text-decoration: none;
 }
-a.active {
+.active {
   color: black;
   text-align: center;
 }
@@ -22,4 +24,11 @@ p {
   font: 1em sans-serif;
   text-decoration: none;
   padding: .75em;
+  background-color: #00FF99
+
+}
+
+background {
+  color: #000066
+
 }
