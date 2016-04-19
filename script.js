@@ -20,8 +20,8 @@ var dataset = {
   ]
 };
 
-var h = 300;
-var w = 500;
+var h = 600;
+var w = 1000;
 
 var svg = d3.select("body")
             .append("svg")
@@ -42,7 +42,7 @@ var edges = svg.selectAll("line")
                .data(dataset.edges)
                .enter()
                .append("line")
-               .style("stroke", "#ccc")
+               .style("stroke", "red")
                .style("stroke-width", 1);
 
 //Create a circle for each node.//
@@ -50,6 +50,18 @@ var nodes = svg.selectAll("circle")
                .data(dataset.nodes)
                .enter()
                .append("circle")
-               .attr("r", 20)
-               .style("fill", "#ccc");
-              //  .call(force.drag);     //Enable drag and drop interaction.//
+               .attr("r", 10)
+               .style("fill", "blue")
+               .call(force.drag);     //Enable drag and drop interaction.//
+
+//Specifies what happens when force layout ticks.//
+force.on("tick", function() {
+
+  edges.attr("x1", function(d) { return d.source.x; })
+       .attr("y1", function(d) { return d.source.y; })
+       .attr("x2", function(d) { return d.source.x; })
+       .attr("y2", function(d) { return d.source.y; });
+
+  nodes.attr("cx", function(d) { return d.x; })
+       .attr("cy", function(d) { return d.y; });
+});
