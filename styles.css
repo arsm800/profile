@@ -1,11 +1,12 @@
 h1 {
   text-align: center;
-  font: 5em sans-serif;
+  font: 4em helvetica;
 }
 h2, h3, h4, h5 {
-  font: 2em black sans-serif;
+  text-align: center;
+  font: 2em black helvetica;
   padding: .75em;
-  background-color: #22A4FE
+  /*background-color: #22A4FE*/
 
 
 }
