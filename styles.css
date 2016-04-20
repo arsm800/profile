@@ -33,3 +33,7 @@ a {
 .nodes:hover circle {
   filter: opacity(50%);
   }
+
+circle:hover {
+  filter: opacity(.50);
+}
