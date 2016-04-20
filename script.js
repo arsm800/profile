@@ -43,14 +43,14 @@ var edges = svg.selectAll("line")
                .enter()
                .append("line")
                .style("stroke", "red")
-               .style("stroke-width", 1);
+               .style("stroke-width", 10);
 
 //Create a circle for each node.//
 var nodes = svg.selectAll("circle")
                .data(dataset.nodes)
                .enter()
                .append("circle")
-               .attr("r", 10)
+               .attr("r", 30)
                .style("fill", "blue")
                .call(force.drag);     //Enable drag and drop interaction.//
 
