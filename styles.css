@@ -20,22 +20,16 @@ a {
   color: black;
   text-align: center;
 }
-p {
-  text-align: center;
-  font: 1em sans-serif;
-  text-decoration: none;
-  padding: .75em;
-  background-color: #00FF99
 
-}
 
-background {
-  color: #000066
-
-}
-
+/*This does not work yet.*/
 .text {
   font-size: 20px;
   font-family: helvetica;
   color: white;
 }
+
+/*This does not work yet*/
+.nodes:hover circle {
+  filter: opacity(50%);
+  }

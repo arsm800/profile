@@ -20,7 +20,7 @@ var dataset = {
   ]
 };
 
-var h = 600;
+var h = 800;
 var w = 1200;
 
 var svg = d3.select("body")
@@ -53,6 +53,7 @@ var nodes = svg.selectAll("circle")
                .attr("r", function(d) {
                  return d.r;              //Appends individual radii specified in dataset to nodes.//
                })
+              //  .append("text")
                .attr("text", function(d) {
                  return d.text;
                })
