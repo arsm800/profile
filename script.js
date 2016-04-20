@@ -20,7 +20,7 @@ var dataset = {
   ]
 };
 
-var h = 1200;
+var h = 800;
 var w = 1200;
 
 var svg = d3.select("body")
@@ -52,6 +52,8 @@ var nodes = svg.selectAll("circle")
                .append("g");    //In order to append other elements to shapes in and svg throughd d3, you must create and append a "g" element on top of the svg.  You can append it to each instance of circle as seen here.  Once you do this, you can append the text.  You are appending both the circle and the text to the g element.  See the DOM in the browser to confirm.//
 
 nodes[0].fixed = true;
+nodes[0].x = w / 2;
+nodes[0].y = h / 2;
 
 nodes.append("circle")
      .attr("r", function(d) {
