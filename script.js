@@ -21,7 +21,7 @@ var dataset = {
 };
 
 var h = 600;
-var w = 1000;
+var w = 1200;
 
 var svg = d3.select("body")
             .append("svg")
@@ -50,7 +50,7 @@ var nodes = svg.selectAll("circle")
                .data(dataset.nodes)
                .enter()
                .append("circle")
-               .attr("r", 30)
+               .attr("r", 40)
                .style("fill", "blue")
                .call(force.drag);     //Enable drag and drop interaction.//
 
