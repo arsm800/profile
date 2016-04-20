@@ -1,13 +1,13 @@
 var dataset = {
   nodes: [
-    {text: "name", "r": 100},
-    {text: "Contact", "r": 50},
-    {text: "email", "r": 25},
-    {text: "gitHub", "r": 25},
-    {text: "projects", "r": 50},
-    {text: "license plates", "r": 25},
-    {text: "electric car maps", "r": 25},
-    {text: "vision", "r": 50}
+    {text: "name", "r": 200},
+    {text: "Contact", "r": 100},
+    {text: "email", "r": 50},
+    {text: "gitHub", "r": 50},
+    {text: "projects", "r": 100},
+    {text: "license plates", "r": 50},
+    {text: "electric car maps", "r": 50},
+    {text: "vision", "r": 100}
   ],
   edges: [
     {source: 0, target: 1},
@@ -52,6 +52,9 @@ var nodes = svg.selectAll("circle")
                .append("circle")
                .attr("r", function(d) {
                  return d.r;              //Appends individual radii specified in dataset to nodes.//
+               })
+               .attr("text", function(d) {
+                 return d.text;
                })
                .style("fill", "blue")
                .call(force.drag);     //Enable drag and drop interaction.//

@@ -33,3 +33,7 @@ background {
   color: #000066
 
 }
+
+svg text {
+  font: 20px helvetica white;
+}
