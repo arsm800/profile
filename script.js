@@ -1,13 +1,13 @@
 var dataset = {
   nodes: [
-    {text: "name", "r": 200},
-    {text: "Contact", "r": 100},
-    {text: "email", "r": 50},
-    {text: "gitHub", "r": 50},
-    {text: "projects", "r": 100},
-    {text: "license plates", "r": 50},
-    {text: "electric car maps", "r": 50},
-    {text: "vision", "r": 100}
+    {text: "name", r: 200, color: "#000066"},
+    {text: "Contact", r: 100, color: "#00FF99"},
+    {text: "email", r: 50, color: "#22A4FE"},
+    {text: "gitHub", r: 50, color: "#22A4FE"},
+    {text: "projects", r: 100, color: "#00FF99"},
+    {text: "license plates", r: 50, color: "#22A4FE"},
+    {text: "electric car maps", r: 50, color: "#22A4FE"},
+    {text: "vision", r: 100, color: "#00FF99"}
   ],
   edges: [
     {source: 0, target: 1},
@@ -56,7 +56,9 @@ var nodes = svg.selectAll("circle")
                .attr("text", function(d) {
                  return d.text;
                })
-               .style("fill", "blue")
+               .style("fill", function(d) {
+                 return d.color;
+               })
                .call(force.drag);     //Enable drag and drop interaction.//
 
 //Specifies what happens when force layout ticks.//
