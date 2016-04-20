@@ -21,12 +21,9 @@ a {
   text-align: center;
 }
 
-
-/*This does not work yet.*/
-.text {
+text {
   font-size: 20px;
   font-family: helvetica;
-  color: white;
 }
 
 /*This does not work yet*/

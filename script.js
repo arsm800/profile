@@ -1,13 +1,13 @@
 var dataset = {
   nodes: [
-    {text: "Andrew Smith-Mui", r: 200, color: "#000066"},
-    {text: "Contact", r: 100, color: "#00FF99"},
+    {text: "Andrew Smith-Mui", r: 150, color: "#000066"},
+    {text: "Contact", r: 80, color: "#00FF99"},
     {text: "email", r: 50, color: "#22A4FE"},
     {text: "gitHub", r: 50, color: "#22A4FE"},
-    {text: "projects", r: 100, color: "#00FF99"},
+    {text: "projects", r: 80, color: "#00FF99"},
     {text: "license plates", r: 50, color: "#22A4FE"},
     {text: "electric car maps", r: 50, color: "#22A4FE"},
-    {text: "vision", r: 100, color: "#00FF99"}
+    {text: "vision", r: 80, color: "#00FF99"}
   ],
   edges: [
     {source: 0, target: 1},
@@ -20,7 +20,7 @@ var dataset = {
   ]
 };
 
-var h = 800;
+var h = 1200;
 var w = 1200;
 
 var svg = d3.select("body")
@@ -33,8 +33,8 @@ var force = d3.layout.force()
                      .nodes(dataset.nodes)
                      .links(dataset.edges)
                      .size([w, h])
-                     .linkDistance([250])
-                     .charge([-100])
+                     .linkDistance([150])
+                     .charge([-10000])
                      .start();
 
 //Create a line for each edge in dataset.//
@@ -42,7 +42,7 @@ var edges = svg.selectAll("line")
                .data(dataset.edges)
                .enter()
                .append("line")
-               .style("stroke", "red")
+               .style("stroke", "black")
                .style("stroke-width", 10);
 
 //Create a circle for each node.//
@@ -50,6 +50,8 @@ var nodes = svg.selectAll("circle")
                .data(dataset.nodes)
                .enter()
                .append("g");    //In order to append other elements to shapes in and svg throughd d3, you must create and append a "g" element on top of the svg.  You can append it to each instance of circle as seen here.  Once you do this, you can append the text.  You are appending both the circle and the text to the g element.  See the DOM in the browser to confirm.//
+
+nodes[0].fixed = true;
 
 nodes.append("circle")
      .attr("r", function(d) {
