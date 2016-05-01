@@ -3,10 +3,10 @@ var dataset = {
     {text: "Andrew Smith-Mui", r: 150, color: "#000066"},
     {text: "Contact", r: 80, color: "#00FF99"},
     {text: "email", r: 50, color: "#22A4FE"},
-    {text: "gitHub", r: 50, color: "#22A4FE"},
+    {text: "gitHub", r: 50, color: "#22A4FE", link: "https://github.com/arsm800"},
     {text: "projects", r: 80, color: "#00FF99"},
-    {text: "license plates", r: 50, color: "#22A4FE"},
-    {text: "electric car maps", r: 50, color: "#22A4FE"},
+    {text: "license plates", r: 50, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
+    {text: "electric car maps", r: 50, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"},
     {text: "vision", r: 80, color: "#00FF99"}
   ],
   edges: [
@@ -43,7 +43,7 @@ var edges = svg.selectAll("line")
                .enter()
                .append("line")
                .style("stroke", "black")
-               .style("stroke-width", 10);
+               .style("stroke-width", 5);
 
 //Create a circle for each node.//
 var nodes = svg.selectAll("circle")
@@ -62,7 +62,15 @@ nodes.append("circle")
      .style("fill", function(d) {
                  return d.color;
                })
-     .call(force.drag);     //Enable drag and drop interaction.//
+     .call(force.drag)     //Enable drag and drop interaction.//
+     .on("mouseover", function(d, i) {
+       d3.select(this)
+       .style("fill-opacity", 0.75);
+     })
+     .on("mouseout", function(d, i) {
+       d3.select(this)
+       .style("fill-opacity", 1);
+     });
 
 nodes.append("text")
      .text(function(d) {
