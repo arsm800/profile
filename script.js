@@ -64,14 +64,23 @@ nodes.append("circle")
                })
      .call(force.drag)     //Enable drag and drop interaction.//
      .on("mouseover", function(d, i) {
-       d3.select(this)
-       .style("fill-opacity", 0.75);
+       if (d.link) {
+        d3.select(this)
+        .style("fill-opacity", 0.75);
+       }
      })
      .on("mouseout", function(d, i) {
-       d3.select(this)
-       .style("fill-opacity", 1);
-     });
+       if (d.link) {
+         d3.select(this)
+         .style("fill-opacity", 1);
+       }
 
+     })
+     .on("click", function(d, i) {
+       if (d.link) {
+         location.href = d.link;
+       }
+     });
 nodes.append("text")
      .text(function(d) {
             return d.text;
