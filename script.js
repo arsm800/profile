@@ -2,17 +2,15 @@ var dataset = {
   nodes: [
     {text: "Andrew Smith-Mui", r: 150, color: "#000066"},
     {text: "Contact", r: 80, color: "#00FF99"},
-    {text: "email", r: 50, color: "#22A4FE"},
+    {text: "twitter", r: 50, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
     {text: "gitHub", r: 50, color: "#22A4FE", link: "https://github.com/arsm800"},
     {text: "projects", r: 80, color: "#00FF99"},
     {text: "license plates", r: 50, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
-    {text: "electric car maps", r: 50, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"},
-    {text: "vision", r: 80, color: "#00FF99"}
+    {text: "electric car maps", r: 50, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"}
   ],
   edges: [
     {source: 0, target: 1},
     {source: 0, target: 4},
-    {source: 0, target: 7},
     {source: 1, target: 2},
     {source: 1, target: 3},
     {source: 4, target: 5},
