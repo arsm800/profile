@@ -1,7 +1,7 @@
 var dataset = {
   nodes: [
-    {text: "Andrew Smith-Mui", r: 150, color: "#000066"},
-    {text: "Contact", r: 80, color: "#00FF99"},
+    {text: "andrew smith-mui", r: 150, color: "#000066"},
+    {text: "contact", r: 80, color: "#00FF99"},
     {text: "twitter", r: 50, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
     {text: "gitHub", r: 50, color: "#22A4FE", link: "https://github.com/arsm800"},
     {text: "projects", r: 80, color: "#00FF99"},
@@ -18,7 +18,7 @@ var dataset = {
   ]
 };
 
-var h = 800;
+var h = 600;
 var w = 1200;
 
 var svg = d3.select("body")
