@@ -6,7 +6,7 @@ var dataset = {
     {text: "gitHub", r: 60, color: "#22A4FE", link: "https://github.com/arsm800"},
     {text: "projects", r: 75, color: "#00FF99"},
     {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
-    {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"}
+    {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"}
   ],
   edges: [
     {source: 0, target: 1},
