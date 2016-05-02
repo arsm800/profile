@@ -1,7 +1,7 @@
 var dataset = {
   nodes: [
     {text: "andrew smith-mui", r: 135, color: "#000066"},
-    {text: "contact", r: 75, color: "#00FF99"},
+    {text: "connect", r: 75, color: "#00FF99"},
     {text: "twitter", r: 60, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
     {text: "gitHub", r: 60, color: "#22A4FE", link: "https://github.com/arsm800"},
     {text: "projects", r: 75, color: "#00FF99"},
