@@ -85,6 +85,7 @@ nodes.append("text")
           })
      .style("fill", "white")
      .style("text-anchor", "middle")
+     .style("font-weight", "bold")
      .on("click", function(d, i) {
        if (d.link) {
          location.href = d.link;
