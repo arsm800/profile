@@ -1,12 +1,12 @@
 var dataset = {
   nodes: [
-    {text: "andrew smith-mui", r: 150, color: "#000066"},
-    {text: "contact", r: 80, color: "#00FF99"},
-    {text: "twitter", r: 50, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
-    {text: "gitHub", r: 50, color: "#22A4FE", link: "https://github.com/arsm800"},
-    {text: "projects", r: 80, color: "#00FF99"},
-    {text: "license plates", r: 50, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
-    {text: "electric car maps", r: 50, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"}
+    {text: "andrew smith-mui", r: 135, color: "#000066"},
+    {text: "contact", r: 75, color: "#00FF99"},
+    {text: "twitter", r: 60, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
+    {text: "gitHub", r: 60, color: "#22A4FE", link: "https://github.com/arsm800"},
+    {text: "projects", r: 75, color: "#00FF99"},
+    {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
+    {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map.herokuapp.com"}
   ],
   edges: [
     {source: 0, target: 1},
@@ -83,7 +83,13 @@ nodes.append("text")
      .text(function(d) {
             return d.text;
           })
-     .style("fill", "black");
+     .style("fill", "white")
+     .style("text-anchor", "middle")
+     .on("click", function(d, i) {
+       if (d.link) {
+         location.href = d.link;
+       }
+     });
 
 
 //Specifies what happens when force layout ticks.  It also seems to be where you set locations of shapes in svg.//
