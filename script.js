@@ -76,7 +76,8 @@ nodes.append("circle")
      })
      .on("click", function(d, i) {
        if (d.link) {
-         location.href = d.link;
+         window.open(d.link, "_blank");
+         //location.href sets the url of the current window.  Use window.open() to open a new window or tab//
        }
      });
 nodes.append("text")
@@ -88,7 +89,7 @@ nodes.append("text")
      .style("font-weight", "bold")
      .on("click", function(d, i) {
        if (d.link) {
-         location.href = d.link;
+         window.open(d.link, "_blank");
        }
      });
 
