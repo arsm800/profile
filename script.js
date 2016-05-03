@@ -7,8 +7,10 @@ var dataset = {
     {text: "projects", r: 75, color: "#00FF99"},
     {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
     {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"},
+    {text: "D3 bars", r: 70, color: "#22A4FE", link: "https://d3-bars.herokuapp.com/"},
     {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/electric_vehicles_map"},
-    {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"}
+    {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"},
+    {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link:"https://github.com/arsm800/d3_bars"}
   ],
   edges: [
     {source: 0, target: 1},
@@ -17,8 +19,10 @@ var dataset = {
     {source: 1, target: 3},
     {source: 4, target: 5},
     {source: 4, target: 6},
-    {source: 6, target: 7},
-    {source: 5, target: 8}
+    {source: 4, target: 7},
+    {source: 6, target: 8},
+    {source: 5, target: 9},
+    {source: 7, target: 10}
   ]
 };
 
