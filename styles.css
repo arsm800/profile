@@ -28,10 +28,10 @@ text {
 }
 
 /*This does not work yet*/
-.nodes:hover circle {
+/*.nodes:hover circle {
   filter: opacity(50%);
   }
 
 circle:hover {
   filter: opacity(.50);
-}
+}*/

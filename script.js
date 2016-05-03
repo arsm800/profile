@@ -62,6 +62,8 @@ nodes.append("circle")
                })
      .call(force.drag)     //Enable drag and drop interaction.//
      .on("mouseover", function(d, i) {
+       d3.select(this)
+        .style("cursor", "pointer");
        if (d.link) {
         d3.select(this)
         .style("fill-opacity", 0.75);
@@ -87,6 +89,12 @@ nodes.append("text")
      .style("fill", "white")
      .style("text-anchor", "middle")
      .style("font-weight", "bold")
+     .on("mouseover", function(d,i) {
+       if (d.link) {
+         d3.select(this)
+         .style("cursor", "pointer");
+       }
+     })
      .on("click", function(d, i) {
        if (d.link) {
          window.open(d.link, "_blank");
