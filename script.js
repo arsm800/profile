@@ -1,16 +1,17 @@
 var dataset = {
   nodes: [
-    {text: "andrew smith-mui", r: 135, color: "#000066"},
-    {text: "connect", r: 75, color: "#00FF99"},
-    {text: "twitter", r: 60, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
-    {text: "email", r: 60, color: "#22A4FE", link: "mailto:asmithmui@gmail.com"},
-    {text: "projects", r: 75, color: "#00FF99"},
+    {text: "andrew smith-mui", r: 100, color: "#000066"},
+    {text: "connect", r: 80, color: "#00FF99"},
+    {text: "twitter", r: 70, color: "#22A4FE", link: "https://twitter.com/SpinMaui"},
+    {text: "email", r: 70, color: "#22A4FE", link: "mailto:asmithmui@gmail.com"},
+    {text: "projects", r: 80, color: "#00FF99"},
     {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
     {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"},
     {text: "D3 bars", r: 70, color: "#22A4FE", link: "https://d3-bars.herokuapp.com/"},
     {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/electric_vehicles_map"},
     {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"},
-    {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link:"https://github.com/arsm800/d3_bars"}
+    {text: "gitHub", r: 40, color: "rgb(215, 47, 83)", link:"https://github.com/arsm800/d3_bars"},
+    {text: "profile", r: 70, color: "#22A4FE", link: "https://profiles.generalassemb.ly/andrew-smith-mui"}
   ],
   edges: [
     {source: 0, target: 1},
@@ -22,7 +23,8 @@ var dataset = {
     {source: 4, target: 7},
     {source: 6, target: 8},
     {source: 5, target: 9},
-    {source: 7, target: 10}
+    {source: 7, target: 10},
+    {source: 1, target: 11}
   ]
 };
 
@@ -39,7 +41,7 @@ var force = d3.layout.force()
                      .nodes(dataset.nodes)
                      .links(dataset.edges)
                      .size([w, h])
-                     .linkDistance([150])
+                     .linkDistance([0.5])
                      .charge([-10000])
                      .start();
 
