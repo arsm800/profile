@@ -12,19 +12,19 @@ var dataset = {
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"},
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link:"https://github.com/arsm800/d3_bars"},
     {text: "profile", r: 70, color: "#22A4FE", link: "https://profiles.generalassemb.ly/andrew-smith-mui"}
-  ],
+  ],    //I could probably add a node attribute called "id" or "type" which identified the type of node if I ever needed to run a function later on.//
   edges: [
-    {source: 0, target: 1},
-    {source: 0, target: 4},
-    {source: 1, target: 2},
-    {source: 1, target: 3},
-    {source: 4, target: 5},
-    {source: 4, target: 6},
-    {source: 4, target: 7},
-    {source: 6, target: 8},
-    {source: 5, target: 9},
-    {source: 7, target: 10},
-    {source: 1, target: 11}
+    {source: 0, target: 1, edge_id: 1},  //I created edge_id to reference in linkDistance function//
+    {source: 0, target: 4, edge_id: 5},
+    {source: 1, target: 2, edge_id: 2},
+    {source: 1, target: 3, edge_id: 2},
+    {source: 4, target: 5, edge_id: 4},
+    {source: 4, target: 6, edge_id: 4},
+    {source: 4, target: 7, edge_id: 4},
+    {source: 6, target: 8, edge_id: 3},
+    {source: 5, target: 9, edge_id: 3},
+    {source: 7, target: 10, edge_id: 3},
+    {source: 1, target: 11, edge_id: 2}
   ]
 };
 
@@ -41,7 +41,23 @@ var force = d3.layout.force()
                      .nodes(dataset.nodes)
                      .links(dataset.edges)
                      .size([w, h])
-                     .linkDistance([-100]) //This can be a constant or a function.//
+                     .linkDistance(function(link) {        //This can be a constant or a function.//
+                       if (link.edge_id === 3) {
+                         return -225;
+                       }
+                       else if (link.edge_id === 4) {
+                         return -150;
+                       }
+                       else if (link.edge_id === 1) {
+                         return -200;
+                       }
+                       else if (link.edge_id === 5) {
+                         return -275;
+                       }
+                       else {
+                         return -10;
+                       }
+                     })
                      .charge([-10000])
                      .start();
 
