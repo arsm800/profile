@@ -46,7 +46,7 @@ var force = d3.layout.force()
                          return -225;
                        }
                        else if (link.edge_id === 4) {
-                         return -150;
+                         return -125;
                        }
                        else if (link.edge_id === 1) {
                          return -200;
