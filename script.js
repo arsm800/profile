@@ -8,7 +8,7 @@ var dataset = {
     {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
     {text: "electric cars map", r: 85, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"},
     {text: "D3 bars", r: 70, color: "#22A4FE", link: "https://d3-bars.herokuapp.com/"},
-    {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/electric_vehicles_map"},
+    {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/electric_vehicles_map_light"},
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"},
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link:"https://github.com/arsm800/d3_bars"},
     {text: "profile", r: 70, color: "#22A4FE", link: "https://profiles.generalassemb.ly/andrew-smith-mui"}
