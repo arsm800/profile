@@ -6,7 +6,7 @@ var dataset = {
     {text: "email", r: 70, color: "#22A4FE", link: "mailto:asmithmui@gmail.com"},
     {text: "projects", r: 80, color: "#00FF99"},
     {text: "license plates", r: 70, color: "#22A4FE", link: "https://license-plates-database.herokuapp.com"},
-    {text: "electric cars", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"},
+    {text: "electric cars map", r: 70, color: "#22A4FE", link: "https://electric-vehicles-map-light.herokuapp.com"},
     {text: "D3 bars", r: 70, color: "#22A4FE", link: "https://d3-bars.herokuapp.com/"},
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/electric_vehicles_map"},
     {text: "code", r: 40, color: "rgb(215, 47, 83)", link: "https://github.com/arsm800/license_plates"},
