@@ -28,7 +28,7 @@ var dataset = {
   ]
 };
 
-var h = 600;
+var h = 650;
 var w = 1200;
 
 var svg = d3.select("body")
